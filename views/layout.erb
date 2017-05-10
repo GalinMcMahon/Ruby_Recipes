@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Recipes</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel='stylesheet' href='/css/styles.css'>
+    <script src="/js/scripts.js"></script>
+  </head>
+  <body>
+    
+    <div class="container">
+      <%= yield %>
+    </div>
+
+    <br>
+    <hr>
+    <br>
+
+    <div id="navigation">
+      <ul style="list-style: none;">
+        <li><a href="/">Home</a></li>
+        <li><a href="/recipes">View All Recipes</a></li>
+        <li><a href="/tags">View Recipes by Type</a></li>
+        <li><a href="/ingredients">View Recipes by Available Ingredients</a></li>
+      </ul>
+    </div>
+
+  </body>
+</html>

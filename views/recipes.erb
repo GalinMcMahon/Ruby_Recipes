@@ -1,0 +1,25 @@
+<h2>Recipes</h2>
+<hr>
+<br>
+
+<% if @recipes == [] %>
+
+<p>There are currently no recipes in the database</p>
+
+<% else %>
+
+<p>Current Recipes</p>
+<ul>
+
+  <% @recipes.each() do |recipe| %>
+
+  <li><a href="/recipes/<%= recipe.id() %>"><%= recipe.recipe_name() %></a></li>
+
+  <% end %>
+
+</ul>
+
+<% end %>
+<div class="later">
+  <a href="/recipe_form">Add New Recipe</a>
+</div>
