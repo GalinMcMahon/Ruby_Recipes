@@ -29,7 +29,8 @@ localhost://4567
 ### Creating the Database in SQL
 
 This is the database schema:
-![screenshot](https://github.com/GalinMcMahon/Ruby_Recipes/blob/master/public/img/schema.png)
+<!-- ![screenshot](https://github.com/GalinMcMahon/Ruby_Recipes/blob/master/public/img/schema.png) -->
+![screenshot](https://github.com/mwarsame9/recipes/blob/master/public/img/schema.png)
 
 ~~~~
 Run psql (In one terminal window type: postgres.  In a second terminal window type: psql.)
