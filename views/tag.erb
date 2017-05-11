@@ -1,0 +1,15 @@
+<h1><%= @tag.tag() %></h1>
+<hr><br>
+
+<form action="/rename_tag/<%= @tag.id %>" method="post">
+  <input name="_method" type="hidden" value="patch">
+  <input id="tag" name="tag" type="text">
+  <br><br>
+  <button type="submit" class="btn btn-success">Update <%= @tag.tag() %></button>
+</form>
+<br>
+
+<form action="/delete_tag/<%= @tag.id %>" method="post">
+  <input name="_method" type="hidden" value="delete">
+  <button type="submit" class="btn btn-danger">Delete <%=@tag.tag %></button>
+</form>

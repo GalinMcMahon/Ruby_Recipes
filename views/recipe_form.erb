@@ -9,10 +9,25 @@
   <label for="recipe_name">Instructions:</label>
   <textarea rows="7" id="instruction" cols="30"></textarea>
   <br><br>
+<hr>
+
+
+
+  <% if @tags == [] %>
+  <p>There are currently no tags in the database</p>
+  <% else %>
+  <ul>
+    <% @tags.each() do |tag| %>
+    <li><a href="/tags/<%= tag.id() %>"><%= tag.tag() %></a></li>
+    <% end %>
+  </ul>
+  <% end %>
+
+
 
 
   add list of ingredients<br><br>
-  add list of tags<br><br>
+
 
   <button type="submit">Add Recipe</button>
 </form>
