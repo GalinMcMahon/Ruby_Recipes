@@ -69,3 +69,8 @@ img{
 .bs-example{
 	margin: 20px;
 }
+
+#add_tag {
+  display: inline-block;
+  text-align: center;
+}

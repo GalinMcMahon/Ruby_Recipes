@@ -1,15 +1,15 @@
-<h1><%= @tag.tag() %></h1>
+<h1><%= @ingredient.ingredient() %></h1>
 <hr><br>
 
-<form action="/rename_tag/<%= @tag.id %>" method="post">
+<form action="/rename_ingredient/<%= @ingredient.id %>" method="post">
   <input name="_method" type="hidden" value="patch">
-  <input id="tag" name="tag" type="text">
+  <input id="ingredient" name="ingredient" type="text">
   <br><br>
-  <button type="submit" class="btn btn-success">Update <%= @tag.tag() %></button>
+  <button type="submit" class="btn btn-success">Update <%= @ingredient.ingredient() %></button>
 </form>
 <br>
 
-<form action="/delete_tag/<%= @tag.id %>" method="post">
+<form action="/delete_ingredient/<%= @ingredient.id %>" method="post">
   <input name="_method" type="hidden" value="delete">
-  <button type="submit" class="btn btn-danger">Delete <%=@tag.tag %></button>
+  <button type="submit" class="btn btn-danger">Delete <%=@ingredient.ingredient %></button>
 </form>

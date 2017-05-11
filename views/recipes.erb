@@ -20,6 +20,7 @@
 </ul>
 
 <% end %>
-<div class="later">
-  <a href="/recipe_form">Add New Recipe</a>
-</div>
+<form action="/recipes" method="post">
+  <input type="text" name="recipe_name" id="tag">
+  <button type="submit">Add Recipe</button>
+</form>

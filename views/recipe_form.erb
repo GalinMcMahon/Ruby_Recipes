@@ -1,33 +1,60 @@
 <link rel='stylesheet' href='/css/styles.css'>
+<h2>recipe_form.erb</h2>
 
-<h3> Add a recipe: </h3>
-<form action="/recipes" method="post">
-  <label for="recipe_name">Recipe Name:</label>
-  <input type="text" name="recipe_name" id="recipe">
-  <br><br>
 
+<h3> <%= @recipe.recipe_name %></h3>
+<br>
+<br>
+<br>
+instructions:
+<br>
+<br>
+<br>
+
+tags:
+<% @recipe.tags.each() do |tag| %>
+<li><%= tag.tag() %></li>
+
+  <% end %>
+<br>
+<br>
+<br>
+ingredients:
+<br>
+<br>
+
+    <!-- ADD INSTRUCTIONS FORM -->
+<form action="/recipes/<%=@recipe.id%>/tags/select" method="post">
   <label for="recipe_name">Instructions:</label>
   <textarea rows="7" id="instruction" cols="30"></textarea>
   <br><br>
+  <button type="submit">Add instructions</button>
+</form>
 <hr>
 
-
-
+      <!-- TAG CHECKBOXES -->
+<form class="" action="/recipe_tags/<%=@recipe.id%>" method="post">
   <% if @tags == [] %>
   <p>There are currently no tags in the database</p>
   <% else %>
   <ul>
     <% @tags.each() do |tag| %>
-    <li><a href="/tags/<%= tag.id() %>"><%= tag.tag() %></a></li>
+    <input type="checkbox" name="recipe_tags[]"
+    value="<%= tag.id %>"><%= tag.tag() %>
     <% end %>
   </ul>
   <% end %>
-
-
-
-
-  add list of ingredients<br><br>
-
-
-  <button type="submit">Add Recipe</button>
+  <button type="submit" name="button">Add tags to this recipe</button>
 </form>
+<br><br>
+
+      <!-- ADD A TYPE FORM -->
+<div id="add_tag"
+  <form action="/tags_recipe" method="post">
+    <input type="text" name="tag" id="tag">
+    <button type="submit">Add A Type</button>
+  </form>
+ <hr>
+</div>
+<br><br>
+  add list of ingredients<br><br>
